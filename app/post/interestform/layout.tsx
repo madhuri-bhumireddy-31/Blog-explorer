@@ -1,0 +1,12 @@
+import './globals.css';
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
+  return (
+      <div className="min-h-screen bg-gray-50 flex justify-center items-start pt-20">
+      {children}
+    </div>
+  );
+}

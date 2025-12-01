@@ -1,0 +1,101 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Interest Form Card Styles */
+.interest-card-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  padding: 0 16px;
+}
+
+.interest-card {
+  width: 100%;
+  max-width: 450px;
+  background-color: #ffffff;
+  border-radius: 15px;
+  border: 1px solid #e2e8f0;
+  padding: 20px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.interest-card h2 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #1f2937;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.interest-card p.description {
+  font-size: 14px;
+  color: #6b7280;
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.interest-card form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.interest-card input,
+.interest-card textarea {
+  padding: 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 10px;
+  font-size: 14px;
+  outline: none;
+}
+
+.interest-card textarea {
+  resize: none;
+  height: 80px;
+}
+
+.interest-card .error-msg {
+  background-color: #fee2e2;
+  color: #b91c1c;
+  text-align: center;
+  padding: 6px;
+  border-radius: 6px;
+  font-size: 13px;
+}
+
+.interest-card button {
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  background-color: #3b82f6;
+  color: #ffffff;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.interest-card button:disabled {
+  background-color: #9ca3af;
+  cursor: not-allowed;
+}
+
+.interest-card .success-msg {
+  color: #16a34a;
+  text-align: center;
+  font-weight: 500;
+}
+
+.interest-card .error-msg-global {
+  color: #dc2626;
+  text-align: center;
+  font-weight: 500;
+}
