@@ -50,12 +50,13 @@ const getPostHoverHandler = useCallback(
   const handleSearch = useCallback((value: string) => setSearchValue(value), []);
 
   // Memoized post list rendering to prevent unnecessary rerenders
-  const postList = () =>
+  const postList = useMemo(
+    () =>
       postsToRender?.map((post: any) => (
         <PostCard key={post.id} post={post} onHover={() => getPostHoverHandler(post.id)}  />
       )),
     [postsToRender, getPostHoverHandler]
-
+  );
 
   return (
     <div className="max-w-3xl mx-auto p-5">
